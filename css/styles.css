@@ -1,7 +1,4 @@
 :root {
-  /* ==========================================================================
-     Logo-Inspired Colour Palette
-     ========================================================================== */
   --primary-color: #E9A23B;
   --primary-hover: #C98224;
   --primary-light: #FFF4C7;
@@ -19,9 +16,7 @@
   --transition: all 0.25s ease-in-out;
 }
 
-/* ==========================================================================
-   Global Reset
-   ========================================================================== */
+/* Global Reset */
 
 * {
   box-sizing: border-box;
@@ -39,9 +34,7 @@ body {
   flex-direction: column;
 }
 
-/* ==========================================================================
-   Navigation Bar
-   ========================================================================== */
+/* Navigation Bar */
 
 .navbar {
   background-color: var(--card-bg);
@@ -128,9 +121,7 @@ body {
   border-radius: 2px;
 }
 
-/* ==========================================================================
-   Page Layout & Switching
-   ========================================================================== */
+/* Page Layout & Switching */
 
 .content-container {
   flex: 1;
@@ -161,9 +152,7 @@ body {
   }
 }
 
-/* ==========================================================================
-   Hero Banner & Section Headers
-   ========================================================================== */
+/* Hero Banner & Section Headers */
 
 .hero-banner {
   background: linear-gradient(135deg, #80683F 0%, #A87932 100%);
@@ -198,9 +187,7 @@ body {
   color: var(--text-muted);
 }
 
-/* ==========================================================================
-   Grids & Informational Cards
-   ========================================================================== */
+/* Grids & Informational Cards */
 
 .grid-cards,
 .about-grid {
@@ -253,9 +240,7 @@ body {
   border-bottom: none;
 }
 
-/* ==========================================================================
-   Televisions Research Page (Questions & Images)
-   ========================================================================== */
+/* Televisions Research Page (Questions & Images) */
 
 .tv-research-card {
   background: var(--card-bg);
@@ -317,9 +302,7 @@ body {
   line-height: 1.6;
 }
 
-/* ==========================================================================
-   Chart Mount Placeholder (D3.js)
-   ========================================================================== */
+/* Chart Mount Placeholder (D3.js) */
 
 .chart-placeholder {
   margin-bottom: 2rem;
@@ -338,9 +321,7 @@ body {
   background-color: var(--bg-light);
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+/* Footer */
 
 .site-footer {
   background-color: var(--card-bg);
@@ -362,11 +343,10 @@ body {
   margin-top: 0.5rem;
   font-size: 0.8rem;
   color: #8A7658;
+
 }
 
-/* ==========================================================================
-   Responsive Design
-   ========================================================================== */
+/* Responsive Design */
 
 @media (max-width: 600px) {
   .nav-container {

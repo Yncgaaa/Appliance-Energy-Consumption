@@ -1,17 +1,18 @@
+
 :root {
-  --primary-color: #E9A23B;
-  --primary-hover: #C98224;
-  --primary-light: #FFF4C7;
+  --primary-color: #ff9418;
+  --primary-hover: #d97b0d;
+  --primary-light: #fff4d6;
 
-  --text-dark: #4A3825;
-  --text-muted: #75644F;
+  --text-dark: #4a3825;
+  --text-muted: #75644f;
 
-  --bg-light: #FFFCF2;
-  --card-bg: #FFFFFF;
-  --border-color: #E8D9B5;
+  --bg-light: #fffaf0;
+  --card-bg: #ffffff;
+  --border-color: #eadfc9;
 
-  --shadow-sm: 0 1px 3px rgba(128, 104, 63, 0.12);
-  --shadow-md: 0 4px 6px -1px rgba(128, 104, 63, 0.15);
+  --shadow-sm: 0 1px 4px rgba(128, 104, 63, 0.08);
+  --shadow-md: 0 4px 12px rgba(128, 104, 63, 0.12);
 
   --transition: all 0.25s ease-in-out;
 }
@@ -25,40 +26,49 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+
   background-color: var(--bg-light);
   color: var(--text-dark);
+
   line-height: 1.6;
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
 }
 
-/* Navigation Bar */
+/* Navigation */
 
 .navbar {
   background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
+
   position: sticky;
   top: 0;
   z-index: 100;
+
   box-shadow: var(--shadow-sm);
 }
 
 .nav-container {
   max-width: 1100px;
   margin: 0 auto;
+
   padding: 0.75rem 1.5rem;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Power Logo Image */
+/* Logo */
 
 .brand-logo {
   display: flex;
   align-items: center;
+
   text-decoration: none;
   cursor: pointer;
 }
@@ -66,10 +76,10 @@ body {
 .brand-logo-img {
   width: 40px;
   height: 40px;
-  max-width: 40px;
-  max-height: 40px;
+
   object-fit: contain;
   display: block;
+
   transition: transform 0.25s ease-in-out;
 }
 
@@ -77,7 +87,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Nav Menu */
+/* Navigation Links */
 
 .nav-menu {
   display: flex;
@@ -86,23 +96,22 @@ body {
 
 .nav-link {
   text-decoration: none;
+
   color: var(--text-muted);
   font-weight: 500;
   font-size: 0.95rem;
+
   padding: 0.5rem 0.85rem;
   border-radius: 6px;
+
   position: relative;
   transition: var(--transition);
 }
-
-/* Hover Feedback */
 
 .nav-link:hover {
   color: var(--primary-hover);
   background-color: var(--primary-light);
 }
-
-/* Current Page Feedback */
 
 .nav-link.active {
   color: var(--primary-hover);
@@ -112,24 +121,31 @@ body {
 
 .nav-link.active::after {
   content: "";
+
   position: absolute;
   bottom: -2px;
   left: 15%;
+
   width: 70%;
   height: 2px;
+
   background-color: var(--primary-color);
   border-radius: 2px;
 }
 
-/* Page Layout & Switching */
+/* Main Content */
 
 .content-container {
   flex: 1;
+
   max-width: 1100px;
+  width: 100%;
+
   margin: 2rem auto;
   padding: 0 1.5rem;
-  width: 100%;
 }
+
+/* Page Navigation */
 
 .page-view {
   display: none;
@@ -152,27 +168,36 @@ body {
   }
 }
 
-/* Hero Banner & Section Headers */
+/* Hero Banner */
 
 .hero-banner {
-  background: linear-gradient(135deg, #80683F 0%, #A87932 100%);
-  color: #FFFFFF;
+  background: linear-gradient(
+    135deg,
+    #80683f 0%,
+    #a87932 100%
+  );
+
+  color: #ffffff;
+
   padding: 3rem 2rem;
   border-radius: 12px;
+
   margin-bottom: 2rem;
 }
 
 .hero-banner h1 {
   font-size: 2.2rem;
   margin-bottom: 0.75rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .lead-text {
   font-size: 1.1rem;
-  color: #FFF4C7;
+  color: #fff4c7;
   max-width: 750px;
 }
+
+/* Section Header */
 
 .section-header {
   margin-bottom: 2rem;
@@ -187,44 +212,162 @@ body {
   color: var(--text-muted);
 }
 
-/* Grids & Informational Cards */
+/* General Cards */
 
 .grid-cards,
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+
   gap: 1.5rem;
 }
 
 .card,
-.about-card,
-.chart-placeholder {
+.about-card {
   background: var(--card-bg);
+
   border: 1px solid var(--border-color);
   border-radius: 10px;
+
   padding: 1.5rem;
+
   box-shadow: var(--shadow-sm);
 }
 
 .card-badge {
   display: inline-block;
+
   background-color: var(--primary-light);
   color: var(--primary-hover);
+
   font-size: 0.75rem;
   font-weight: 700;
+
   text-transform: uppercase;
+
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
+
   margin-bottom: 0.75rem;
 }
 
 .card h2,
-.about-card h2,
-.chart-placeholder h3 {
+.about-card h2 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   color: var(--text-dark);
 }
+
+/* TELEVISION RESEARCH PAGE */
+
+.tv-research-card {
+  background-color: transparent;
+
+  border: none;
+  padding: 0;
+
+  margin-bottom: 2.5rem;
+
+  box-shadow: none;
+}
+
+/* Individual Question */
+
+.question-block {
+  margin-bottom: 3rem;
+}
+
+.question-block:last-child {
+  margin-bottom: 0;
+}
+
+/* Question Heading */
+
+.question-block h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  color: #986c35;
+
+  line-height: 1.5;
+
+  margin-bottom: 1.2rem;
+
+  padding: 0.35rem 0 0.35rem 1rem;
+
+  border-left: 5px solid var(--primary-color);
+}
+
+/* Chart Image Card */
+
+.tv-image-wrapper {
+  background-color: #ffffff;
+
+  border: 1px solid #eee5d5;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 100%;
+
+  box-shadow: 0 4px 12px rgba(128, 104, 63, 0.12);
+
+  margin-bottom: 1.5rem;
+}
+
+/* Chart Image */
+
+.tv-research-img {
+  width: 100%;
+  height: auto;
+
+  max-height: none;
+
+  object-fit: contain;
+  display: block;
+
+  background-color: #ffffff;
+}
+
+/* Answer Box */
+
+.answer-box {
+  background-color: #fff4d6;
+
+  border-left: 5px solid var(--primary-color);
+
+  border-radius: 6px;
+
+  padding: 1rem 1.2rem;
+
+  margin-top: 1.5rem;
+
+  color: #1f2937;
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.answer-box strong {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Question Labels */
+
+.question-block > p {
+  margin: 1rem 0 0.5rem;
+
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* About Page */
 
 .spec-list {
   list-style: none;
@@ -240,110 +383,34 @@ body {
   border-bottom: none;
 }
 
-/* Televisions Research Page (Questions & Images) */
-
-.tv-research-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-left: 5px solid var(--primary-color);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(128, 104, 63, 0.10);
-  margin-bottom: 2.5rem;
-}
-
-.question-block {
-  margin-bottom: 2.5rem;
-}
-
-.question-block:last-child {
-  margin-bottom: 0;
-}
-
-.question-block h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-/* Image Frames */
-
-.tv-image-wrapper {
-  background-color: #FFFDF5;
-  border: 1.5px solid #E8D9B5;
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 750px;
-  box-shadow: 0 2px 6px rgba(128, 104, 63, 0.08);
-}
-
-.tv-research-img {
-  width: 100%;
-  height: auto;
-  max-height: 480px;
-  object-fit: contain;
-  display: block;
-  background-color: #FFFFFF;
-}
-
-/* Remaining Questions List */
-
-.remaining-questions-list {
-  padding-left: 1.5rem;
-  color: var(--text-dark);
-}
-
-.remaining-questions-list li {
-  font-size: 1.05rem;
-  font-weight: 500;
-  margin-bottom: 0.85rem;
-  line-height: 1.6;
-}
-
-/* Chart Mount Placeholder (D3.js) */
-
-.chart-placeholder {
-  margin-bottom: 2rem;
-}
-
-.canvas-box {
-  margin-top: 1rem;
-  height: 220px;
-  border: 2px dashed var(--border-color);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-weight: 500;
-  background-color: var(--bg-light);
-}
-
 /* Footer */
 
 .site-footer {
   background-color: var(--card-bg);
+
   border-top: 1px solid var(--border-color);
+
   padding: 1.5rem 0;
   margin-top: auto;
 }
 
 .footer-container {
   max-width: 1100px;
+
   margin: 0 auto;
   padding: 0 1.5rem;
+
   text-align: center;
+
   font-size: 0.875rem;
   color: var(--text-muted);
 }
 
 .ai-acknowledgement {
   margin-top: 0.5rem;
-  font-size: 0.8rem;
-  color: #8A7658;
 
+  font-size: 0.8rem;
+  color: #8a7658;
 }
 
 /* Responsive Design */
@@ -373,5 +440,19 @@ body {
 
   .content-container {
     padding: 0 1rem;
+  }
+
+  .question-block h2 {
+    font-size: 1.05rem;
+    padding-left: 0.75rem;
+  }
+
+  .tv-image-wrapper {
+    border-radius: 8px;
+  }
+
+  .answer-box {
+    font-size: 0.95rem;
+    padding: 0.85rem 1rem;
   }
 }
